@@ -1,17 +1,13 @@
+:root {
+  --icon-primary: #5C94FF;
+  --icon-secondary: #D4E8FF;
+}
+
 body {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
   justify-content: space-between;
   height: 100vh
-}
-
-.row {
-  font-family: ui-rounded, "SF Pro Rounded", system-ui, san-serif;
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
 }
 
 p {
@@ -23,8 +19,58 @@ h1 {
   font-size: 6rem;
   line-height: 1.4;
   margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.row {
+  font-family: ui-rounded, "SF Pro Rounded", system-ui, san-serif;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .footer p {
   font-size: 0.8rem;
 }
+
+/* Bit Icon */
+
+.icon-grid {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-grid-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.icon-grid .col-xs-2 {
+  justify-content: center;
+  background: var(--icon-primary);
+  height: 25px;
+  width: 25px;
+  margin: 2px;
+  border-radius: 5px
+}
+
+.icon-grid .row:nth-child(1) .col-xs-2:nth-child(1) {
+  animation: load 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes load {
+  0% {
+    background-color: var(--icon-secondary);
+  }
+  100% {
+    background-color: var(--icon-primary);
+  }
+}
+
+
+
